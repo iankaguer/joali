@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.AZtech_labs.joali"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    allprojects {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //implementation ''
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    implementation 'com.airbnb.android:lottie:3.0.7'
+    //implementation 'io.realm:realm:0.69.0'
+
+    implementation 'com.squareup.okhttp3:okhttp:4.0.1'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.karumi:dexter:5.0.0'
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    implementation 'com.andkulikov:transitionseverywhere:2.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'eu.long1:spacetablayout:1.0.4'
+    implementation 'devlight.io:navigationtabbar:1.2.5'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    implementation 'com.yarolegovich:sliding-root-nav:1.1.0'
+    implementation 'com.github.armcha:SpaceNavigationView:1.6.0'
+    implementation 'com.gauravk.bubblenavigation:bubblenavigation:1.0.7'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
+    implementation 'com.reginald.swiperefresh:library:1.1.2'
+    //implementation 'com.android.support:appcompat-v7:28.0.0-rc02'
+}

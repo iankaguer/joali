@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/loginCard"
+    android:elevation="5dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="@dimen/loginViewsMargin"
+    android:layout_marginBottom="@dimen/loginViewsMargin"
+    android:background="@color/white_opac"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".login.LogInFragment">
+
+
+
+    <LinearLayout
+        style="@style/linearParent"
+        android:layout_gravity="center"
+        android:padding="@dimen/loginViewsMargin">
+
+        <TextView
+            style="@style/headerTextPrimary"
+            android:text="Login"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="@dimen/loginViewsMargin"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputEmail"
+            style="@style/parent"
+            android:textColorHint="@color/colorWhite"
+            android:layout_marginTop="@dimen/loginViewsMargin">
+            <EditText
+                android:textColorHint="@color/colorWhite"
+                android:textColorLink="@color/colorWhite"
+                android:textColorHighlight="@color/colorWhite"
+                android:textColor="@color/colorAccent"
+                android:backgroundTint="@color/colorWhite"
+                android:id="@+id/editTextEmail"
+                style="@style/modifiedEditText"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:hint="@string/login_email_hint"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputPassword"
+            style="@style/parent"
+            android:textColorHint="@color/colorWhite"
+            android:layout_marginTop="@dimen/loginViewsMargin">
+            <EditText
+                android:id="@+id/editTextPassword"
+                style="@style/modifiedEditText"
+                android:textColorHint="@color/colorWhite"
+                android:textColorLink="@color/colorWhite"
+                android:textColorHighlight="@color/colorWhite"
+                android:textColor="@color/colorAccent"
+                android:backgroundTint="@color/colorWhite"
+                android:hint="@string/login_password_hint"
+                android:maxLines="1"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            style="@style/viewParent"
+            android:text="Forgot Password?"
+            android:textColor="@color/colorAccent"
+            android:typeface="serif"
+            android:textSize="@dimen/newsMoreTextSize"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorSecondary"
+            android:background="@color/colorWhite"
+            android:elevation="2dp"
+            android:text="Login"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/loginViewsMargin"/>
+
+        <TextView
+            style="@style/parent"
+            android:textAlignment="center"
+            android:typeface="serif"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
+            android:text="@string/login_signup_hint"
+            android:layout_marginTop="@dimen/loginViewsMargin"/>
+
+
+    </LinearLayout>
+</LinearLayout>

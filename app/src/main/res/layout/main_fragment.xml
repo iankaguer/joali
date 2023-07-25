@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/ct"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/containers"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintBottom_toTopOf="@id/equal_navigation_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.gauravk.bubblenavigation.BubbleNavigationLinearView
+        android:id="@+id/equal_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:elevation="8dp"
+        android:padding="6dp"
+        app:bnc_mode="spread"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/m_proximite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:bt_colorActive="@color/colorSecondary"
+            app:bt_colorInactive="@color/colorPrimary"
+            app:bt_icon="@drawable/ic_proximite"
+            app:bt_title="Local" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/m_fav_news"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:bt_colorActive="@color/colorSecondary"
+            app:bt_colorInactive="@color/colorPrimary"
+            app:bt_icon="@drawable/ic_fav_news"
+            app:bt_title="Mes news" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/m_ic_globe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:bt_colorActive="@color/colorSecondary"
+            app:bt_colorInactive="@color/colorPrimary"
+            app:bt_icon="@drawable/ic_globe"
+            app:bt_title="Au monde"
+            />
+
+    </com.gauravk.bubblenavigation.BubbleNavigationLinearView>
+</androidx.constraintlayout.widget.ConstraintLayout>
